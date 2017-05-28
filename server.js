@@ -16,7 +16,7 @@ MongoClient.connect('mongodb://db_user:db_user@ds115131.mlab.com:15131/who-is-pr
  (err, database) => {
   if (err) return console.log(err)
   db = database
-  app.listen(3000, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log('database listening on 3000')
   })
 })
