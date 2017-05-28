@@ -1,0 +1,24 @@
+html{
+  font-family: consolas, serif;
+}
+
+body{
+ background: rgb(18, 122, 9);; /* For browsers that do not support gradients */
+ background: -webkit-linear-gradient(left top, #e3f5ab , #e3f5ab ); /* For Safari 5.1 to 6.0 */
+ background: -o-linear-gradient(bottom right, #e3f5ab , #e3f5ab ); /* For Opera 11.1 to 12.0 */
+ background: -moz-linear-gradient(bottom right, #e3f5ab , #e3f5ab ); /* For Firefox 3.6 to 15 */
+ background: linear-gradient(to bottom right, #e3f5ab , #e3f5ab ); /* Standard syntax */
+  font-family: inherit;
+}
+
+input, textarea, select, button{
+  font-family:inherit;
+}
+
+h1{
+  text-align: center;
+}
+
+li{
+  list-style: none;
+}
