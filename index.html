@@ -7,15 +7,12 @@
 
 </head>
 <body>
-<nav>
-  <ul>
-    <li>Conferences</li>
-    <li>Submit</li>
-    <li>About</li>
-  </ul>
-</nav>
 
-  <h1>Who is presenting?</h1>
+<header>
+<h1>Who is presenting?</h1>
+</header>
+
+<h2>Submit a conference speaker or see who is presenting<h2>
 
   <form action="/quotes" method="POST">
   <input type="text" placeholder="name" name="name">
@@ -24,5 +21,16 @@
   <input type="text" placeholder="date" name="date">
   <button type="submit">Submit</button>
 </form>
+
+
+<div class="dropdown">
+  <button class="dropbtn"></button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
 </body>
 </html>
