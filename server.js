@@ -6,9 +6,9 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path')
 
-
+app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 var db
 
@@ -17,7 +17,7 @@ MongoClient.connect('mongodb://db_user:db_user@ds115131.mlab.com:15131/who-is-pr
   if (err) return console.log(err)
   db = database
   app.listen(process.env.PORT || 3000, () => {
-    console.log('database listening on 3000')
+    console.log('database listening on port ' + process.env.PORT || 3000)
   })
 })
 
