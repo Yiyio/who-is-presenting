@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Who is presenting?</title>
-  <link rel="stylesheet" href="public/styles.css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 
 </head>
+
 <body>
 
 <header>
 <h1>Who is presenting?</h1>
 </header>
 <div class = "uppertext">
-<h2>Submit a conference speaker or see who is presenting<h2>
+<h2>Submit a conference speaker or see a list of presenters<h2>
 
 
 
-  <form action="/quotes" method="POST">
+  <form action="/presenters" method="POST">
   <input type="text" placeholder="name" name="name">
   <input type="text" placeholder="conference" name="conference">
   <input type="text" placeholder="location" name="location">
@@ -28,9 +29,11 @@
 <div class="dropdown">
   <button class="dropbtn"></button>
   <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <% for(var i=0; i<presenters.length; i++) {%>
+      <a href=#>
+        <span><%= presenters[i].conference %></span>
+      </a>
+    <% } %>
   </div>
 </div>
 

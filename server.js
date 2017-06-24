@@ -6,7 +6,8 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path')
 
-app.use(express.static(path.join(__dirname, '/public')));
+//app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 
@@ -26,9 +27,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/', function(req, res){
-  db.collection('quotes').find().toArray((err, result) => {
+  db.collection('presenters').find().toArray((err, result) => {
      if (err) return console.log(err)
-     res.render('index.ejs', {quotes: result})
+     res.render('index.ejs', {presenters: result})
    })
 })
 
