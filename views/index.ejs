@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Who is presenting?</title>
+  <script src="public/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="styles.css" type="text/css">
 
 </head>
@@ -29,8 +30,10 @@
 <div class="dropdown">
   <button class="dropbtn"></button>
   <div class="dropdown-content">
-    <% for(var i=0; i<presenters.length; i++) {%>
-      <a href=#>
+    <%
+
+    for(var i=0; i<presenters.length; i++) {%>
+      <a href="#">
         <span><%= presenters[i].conference %></span>
       </a>
     <% } %>
@@ -39,13 +42,23 @@
 
 </div>
 
-<!-- <script>
-  $("ul li").click(function(){
-    var attr =  $(this).attr('id');
-    $(".itemDetail").hide();
-    $("#"+attr+"Detail").show();
+<div class = "lowertext">
+  <%
+
+  for(var i=0; i<presenters.length; i++) {%>
+
+      <p><%= presenters[i].name %></p>
+      <p><%= presenters[i].conference %></p>
+      <p><%= presenters[i].location %></p>
+      <p><%= presenters[i].date %></p>
+  <% } %>
+</div>
+
+<script>
+  $("a").click(function(){
+    $(".lowertext").css('visibility', 'visible');
   })
-</script> -->
+</script>
 
 </body>
 </html>
